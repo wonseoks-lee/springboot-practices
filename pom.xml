@@ -10,5 +10,7 @@
 		<module>helloworld</module>
 		<module>myapplication</module>
 		<module>myweb</module>
+		<module>spring-setting-practices</module>
+		<module>dependency</module>
 	</modules>
 </project>
