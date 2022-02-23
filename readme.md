@@ -175,4 +175,10 @@ public class TestController {
 2.  lombok.jar Library add
 + https://procjectlombok.or 접속, Download
 + terminal -> java -jar lombok.jar
+
+## 회사에서만 사용하는 스타터, 자동설정
+1.	원하는 스타터 dependency추가
+	-	버전관리를 일괄적으로 하고 싶다면, dependencyManager 추가
+2.	자동설정기능 구현
+	-	spring-boot-autoconfiguration dependency 추가 
  
