@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.poscoct.jdbc.config.BoardAutoConfiguration
+com.poscoict.jdbc.config.BoardAutoConfiguration
