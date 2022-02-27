@@ -13,5 +13,6 @@
 		<module>spring-setting-practices</module>
 		<module>dependency</module>
 		<module>board-spring-boot-starter</module>
+		<module>test-starter</module>
 	</modules>
 </project>
