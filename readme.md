@@ -181,4 +181,108 @@ public class TestController {
 	-	버전관리를 일괄적으로 하고 싶다면, dependencyManager 추가
 2.	자동설정기능 구현
 	-	spring-boot-autoconfiguration dependency 추가 
+	
+# @SpringBootApplication
+
+@EnableAutoConfiguration, @ComponentScan, @SpringBootConfiguration 를 합쳐놓은 어노테이션
+
+@SpringBootConfiguration → 빈클래스를 표현하기위해 사용, @Configuration 에 이름만 스프링부트를 붙힌 것
+
+@EnableAutoConfiguration, @ComponentScan → 스프링 컨테이너 초기화와 관련된 어노테이션
+
+- ComponentScan : @Configuration, @Repository, @Service, @Controller, @RestController객체를 메모리에 올리는 역할
+    
+    → 가장 먼저 처리되며, 사용자가 등록한 빈을 먼저 메모리에 올린다
+    
+- EnableAutoConfiguration : 스프링부트는 스프링 컨테이너를 구동 할 때 두단계로 나누어 객체를 생성한다. ( 애플리케이션을 운영하기 위해서는 두 종류의 빈들이 필요하기 때문 )
+    
+    → 멀티파트 리졸버 객체들을 메모리에 올리는 작업 처리 
+    
+    → spring-boot-autoconfigure-2.1.5.RELEASE.jar 의 META-INF 폴더에 spring.factories 파일을 참조하여 여러가지 빈을 생성
+    
+    →  ComponentScan단계에서 메모리에 올린 빈들(자동설정에 의한)의 등록을 처리한다.
+    
+
+# Maven
+
+package : target 폴더에 jar 파일만 생성
+
+install : 다른 프로젝트에서 현재 프로젝트를 사용할 수 있도록 메이븐 로컬 리포지터리에도 등록
+
+# Bean Overriding
+
+```
+# Bean Overriding
+spring.main.allow-bean-definition-overriding=true
+```
+
+같은 타입을 가진 빈을 생성 시, 충돌이 발생한다
+
+이를 방지하기위해, application.properties 의 bean Overriding설정을 해준다.
+
+그러나, 이를 실행하더라도 기존 프로젝트의 빈이 @EnableAutoConfiguration 에 의해 덮어씌어진다.
+
+이를 해결하기위해 @Conditional 을 사용하여 기본 빈생성을 언제해줄지 설정한다.
+
+# @Conditional
+
+@Conditional : 조건에 따라 새로운 객체를 생성할지 말지 결정
+
+빈을 오버라이딩이 가능해도 기존 스타터프로젝트(board-spring-boot-starter)에서 빈으로 등록한  JDBCManager가 사용된다. 
+
+새로 설정한 JDBCManager객체를 사용하기 위해서는 @Conditional 조건을 사용하여 
+
+## @ConditionalOnMissingBean
+
+등록하려는 빈이 메모리에 없는 경우에만 현재의 빈 등록을 처리
+
+```java
+@Configuration
+public class BoardAutoConfiguration {
+	
+	@Bean
+	@ConditionalOnMissingBean
+	public JDBCConnectionManager getJDBCConnectionManager()	{
+		JDBCConnectionManager manager = new JDBCConnectionManager();
+		manager.setDriverClass("oracle.jdbc.driver.OracleDriver");
+		manager.setUrl("jdbc:oracle:thin:@localhost:1521:xe");
+		manager.setUsername("hr");
+		manager.setPassword("hr");
+		return manager;
+	}
+}
+```
+
+따로 빈등록을 해주지 않았을때만 위 코드가 작동된다 ( default Bean 설정 )
+
+# @ConfigurationProperties
+
+```
+# DataSoruce : Oracle
+board.jdbc.driverClass=oracle.jdbc.driver.OracleDriver
+board.jdbc.url=jdbc:oracle:thin:@localhost:1521:xe
+board.jdbc.username=hr
+board.jdbc.password=hr
+```
+
+프로퍼티파일에 설정할 프로퍼티를 접근하기위한 접두사
+
+```java
+@ConfigurationProperties(prefix="board.jdbc")
+public class JDBCConnectionManagerProperties {
+	private String driverClass;
+	private String url;
+	private String username;
+	private String password;
+	...
+}
+```
+
+접두사 뒤에 있는 프로퍼티에 해당하는 Setter 메소드들이 자동으로 실행되어 프로퍼티 값들을 설정하는 것
+
+Ex)  board.jdbc.driverClass 라면 board.jdbc 뒤에 있는 프로퍼티 이름인 driverClass 에 해당하는 setDriverClass() 메소드가 자동으로 호출
+
+## @EnableConfigurationProperties
+
+활성화할 프로퍼티 클래스를 지정할 때 사용
  
