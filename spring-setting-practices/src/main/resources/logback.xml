@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	
+	<appender name="fileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>src/main/resources/logs/board_log.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>src/main/resources/logs/myboard.%d{yyyy-MM-dd}.log.gz</FileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<Pattern>
+				%d{yyyy:MM:dd HH:mm:ss.SSS} %-5level --- [%thread] %logger{35} - %msg %n
+			</Pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<Pattern>
+				%d{yyyy:MM:dd HH:mm:ss.SSS} %-5level --- [%thread] %logger{35} - %msg %n
+			</Pattern>
+		</encoder>
+	</appender>
+	
+	<logger name="com.poscoict" level="warn" additivity="false">
+            <appender-ref ref="consoleAppender" />
+            <appender-ref ref="fileAppender" />
+    </logger>
+    
+    <root level="info">
+		<appender-ref ref="consoleAppender" />
+	</root>
+</configuration>

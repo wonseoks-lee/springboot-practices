@@ -1,16 +1,19 @@
 package com.poscoict.controller;
 
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import com.poscoict.domain.BoardVO;
+import com.poscoict.service.BoardService;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class BoardController {
+	
+	@Autowired
+	private BoardService boardService;
     
     public BoardController(){
         System.out.println("===> BaordController 생성");
@@ -23,29 +26,11 @@ public class BoardController {
     
     @GetMapping("/getBoard")
     public BoardVO getBoard() {
-        BoardVO board = new BoardVO();
-        board.setCnt(1);
-        board.setTitle("test title ...");
-        board.setWriter("tester");
-        board.setContent("test contents..........");
-        board.setCreateDate(new Date());
-        return board;
+        return boardService.getBoard();
     }
 
     @GetMapping("/getBoardList")
     public List<BoardVO> getBoardList() {
-        List<BoardVO> boardList = new ArrayList<BoardVO>();
-        for(int i = 1; i <= 10; i++){
-            BoardVO board = new BoardVO();
-            board.setSeq(i);
-            board.setTitle("제목" + i);
-            board.setWriter("테스터");
-            board.setContent(i + "번 내용입니다.");
-            board.setCreateDate(new Date());
-            board.setCnt(0);
-            boardList.add(board);
-        }
-        
-        return boardList;
+        return boardService.getBoardList();
     }
 }

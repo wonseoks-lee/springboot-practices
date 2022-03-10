@@ -1,0 +1,89 @@
+2022-03-10 15:44:22.695  INFO 2917 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-10 15:44:22.696  INFO 2917 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-10 15:44:22.696  INFO 2917 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-10 15:44:22.704  INFO 2917 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-10 15:44:22.704  INFO 2917 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 116 ms
+2022-03-10 15:44:22.747  INFO 2917 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-10 15:44:22.754  INFO 2917 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-10 15:44:22.757  WARN 2917 --- [restartedMain] com.poscoict.LoggingRunner               : WARN 로그 메시지
+2022-03-10 15:44:22.757 ERROR 2917 --- [restartedMain] com.poscoict.LoggingRunner               : ERROR 로그 메시지
+2022-03-10 15:44:22.758  INFO 2917 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-03-10 15:44:31.392  INFO 2917 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-10 15:44:31.393  INFO 2917 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-10 15:44:31.394  INFO 2917 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-10 15:44:31.400  INFO 2917 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-10 15:44:31.401  INFO 2917 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 119 ms
+2022-03-10 15:44:31.443  INFO 2917 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-10 15:44:31.448  INFO 2917 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-10 15:44:31.451  WARN 2917 --- [restartedMain] com.poscoict.LoggingRunner               : WARN 로그 메시지
+2022-03-10 15:44:31.451 ERROR 2917 --- [restartedMain] com.poscoict.LoggingRunner               : ERROR 로그 메시지
+2022-03-10 15:44:31.452  INFO 2917 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-03-10 15:44:33.018  INFO 2917 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-10 15:44:33.019  INFO 2917 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-10 15:44:33.019  INFO 2917 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-10 15:44:33.026  INFO 2917 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-10 15:44:33.026  INFO 2917 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 114 ms
+2022-03-10 15:44:33.070  INFO 2917 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-10 15:44:33.076  INFO 2917 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-10 15:44:33.079  WARN 2917 --- [restartedMain] com.poscoict.LoggingRunner               : WARN 로그 메시지
+2022-03-10 15:44:33.080 ERROR 2917 --- [restartedMain] com.poscoict.LoggingRunner               : ERROR 로그 메시지
+2022-03-10 15:44:33.080  INFO 2917 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-03-10 15:44:38.673  INFO 2917 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-10 15:44:38.674  INFO 2917 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-10 15:44:38.674  INFO 2917 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-10 15:44:38.680  INFO 2917 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-10 15:44:38.681  INFO 2917 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 114 ms
+2022-03-10 15:44:38.720  INFO 2917 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-10 15:44:38.725  INFO 2917 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-10 15:44:38.728  WARN 2917 --- [restartedMain] com.poscoict.LoggingRunner               : WARN 로그 메시지
+2022-03-10 15:44:38.729 ERROR 2917 --- [restartedMain] com.poscoict.LoggingRunner               : ERROR 로그 메시지
+2022-03-10 15:44:38.729  INFO 2917 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-03-10 15:46:51.947  INFO 2917 --- [restartedMain] com.poscoict.Chaptor01Application        : Starting Chaptor01Application using Java 11.0.13 on ui-MacBookPro.local with PID 2917 (/Users/wonseok/Desktop/eclipse-workspace/springboot-practices/spring-setting-practices/target/classes started by wonseok in /Users/wonseok/Desktop/eclipse-workspace/springboot-practices/spring-setting-practices)
+2022-03-10 15:46:51.948 DEBUG 2917 --- [restartedMain] com.poscoict.Chaptor01Application        : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-10 15:46:51.949  INFO 2917 --- [restartedMain] com.poscoict.Chaptor01Application        : No active profile set, falling back to default profiles: default
+2022-03-10 15:46:52.056  INFO 2917 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-10 15:46:52.057  INFO 2917 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-10 15:46:52.057  INFO 2917 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-10 15:46:52.062  INFO 2917 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-10 15:46:52.063  INFO 2917 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 113 ms
+2022-03-10 15:46:52.101  INFO 2917 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-10 15:46:52.107  INFO 2917 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-10 15:46:52.110  INFO 2917 --- [restartedMain] com.poscoict.Chaptor01Application        : Started Chaptor01Application in 0.21 seconds (JVM running for 402.029)
+2022-03-10 15:46:52.110 DEBUG 2917 --- [restartedMain] com.poscoict.LoggingRunner               : DEBUG 로그 메시지
+2022-03-10 15:46:52.110  INFO 2917 --- [restartedMain] com.poscoict.LoggingRunner               : INFO 로그 메시지
+2022-03-10 15:46:52.110  WARN 2917 --- [restartedMain] com.poscoict.LoggingRunner               : WARN 로그 메시지
+2022-03-10 15:46:52.111 ERROR 2917 --- [restartedMain] com.poscoict.LoggingRunner               : ERROR 로그 메시지
+2022-03-10 15:46:52.111  INFO 2917 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-03-10 15:51:48.041  INFO 2917 --- [restartedMain] com.poscoict.Chaptor01Application        : Starting Chaptor01Application using Java 11.0.13 on ui-MacBookPro.local with PID 2917 (/Users/wonseok/Desktop/eclipse-workspace/springboot-practices/spring-setting-practices/target/classes started by wonseok in /Users/wonseok/Desktop/eclipse-workspace/springboot-practices/spring-setting-practices)
+2022-03-10 15:51:48.041 DEBUG 2917 --- [restartedMain] com.poscoict.Chaptor01Application        : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-10 15:51:48.041  INFO 2917 --- [restartedMain] com.poscoict.Chaptor01Application        : No active profile set, falling back to default profiles: default
+2022-03-10 15:51:48.154  INFO 2917 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-10 15:51:48.155  INFO 2917 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-10 15:51:48.156  INFO 2917 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-10 15:51:48.162  INFO 2917 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-10 15:51:48.162  INFO 2917 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 120 ms
+2022-03-10 15:51:48.201  INFO 2917 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-10 15:51:48.207  INFO 2917 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-10 15:51:48.210  INFO 2917 --- [restartedMain] com.poscoict.Chaptor01Application        : Started Chaptor01Application in 0.197 seconds (JVM running for 698.128)
+2022-03-10 15:51:48.211 DEBUG 2917 --- [restartedMain] com.poscoict.LoggingRunner               : DEBUG 로그 메시지
+2022-03-10 15:51:48.211  INFO 2917 --- [restartedMain] com.poscoict.LoggingRunner               : INFO 로그 메시지
+2022-03-10 15:51:48.211  WARN 2917 --- [restartedMain] com.poscoict.LoggingRunner               : WARN 로그 메시지
+2022-03-10 15:51:48.211 ERROR 2917 --- [restartedMain] com.poscoict.LoggingRunner               : ERROR 로그 메시지
+2022-03-10 15:51:48.212  INFO 2917 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-03-10 15:51:49.682  INFO 2917 --- [restartedMain] com.poscoict.Chaptor01Application        : Starting Chaptor01Application using Java 11.0.13 on ui-MacBookPro.local with PID 2917 (/Users/wonseok/Desktop/eclipse-workspace/springboot-practices/spring-setting-practices/target/classes started by wonseok in /Users/wonseok/Desktop/eclipse-workspace/springboot-practices/spring-setting-practices)
+2022-03-10 15:51:49.682 DEBUG 2917 --- [restartedMain] com.poscoict.Chaptor01Application        : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-10 15:51:49.682  INFO 2917 --- [restartedMain] com.poscoict.Chaptor01Application        : No active profile set, falling back to default profiles: default
+2022-03-10 15:51:49.792  INFO 2917 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-10 15:51:49.793  INFO 2917 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-10 15:51:49.793  INFO 2917 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-10 15:51:49.800  INFO 2917 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-10 15:51:49.800  INFO 2917 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 116 ms
+2022-03-10 15:51:49.843  INFO 2917 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-10 15:51:49.848  INFO 2917 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-10 15:51:49.851  INFO 2917 --- [restartedMain] com.poscoict.Chaptor01Application        : Started Chaptor01Application in 0.193 seconds (JVM running for 699.768)
+2022-03-10 15:51:49.851 DEBUG 2917 --- [restartedMain] com.poscoict.LoggingRunner               : DEBUG 로그 메시지
+2022-03-10 15:51:49.851  INFO 2917 --- [restartedMain] com.poscoict.LoggingRunner               : INFO 로그 메시지
+2022-03-10 15:51:49.852  WARN 2917 --- [restartedMain] com.poscoict.LoggingRunner               : WARN 로그 메시지
+2022-03-10 15:51:49.852 ERROR 2917 --- [restartedMain] com.poscoict.LoggingRunner               : ERROR 로그 메시지
+2022-03-10 15:51:49.852  INFO 2917 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-03-10 15:51:52.110  INFO 2917 --- [RMI TCP Connection(16)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
