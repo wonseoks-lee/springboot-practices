@@ -414,6 +414,8 @@ java -jar 프로젝트이름 → JarLauncher클래스
 
 # ORM
 
+OOP(Object Oriented Programming)에서 쓰이는 객체라는 개념을 구현한 클래스와 RDB(Relational DataBase)에서 쓰이는 데이터인 테이블 **자동**으로 매핑(연결)하는 것을 의미
+
 하이버네이트가 다른 orm에 비해 애플리케이션에서 사용하는 SQL까지도 프레임워크에서 제공
 
 → 하이버네이트 이후 수많은 ORM 프레임워크 등장
@@ -474,6 +476,7 @@ public class Board{
 	private Date createDate;
 	private Long cnt;
 ```
+엔티티란 테이블과 매핑되는 자바클래스를 의미
 
 BOARD테이블 칼럼에 해당하는 변수 선언 (VO)
 
