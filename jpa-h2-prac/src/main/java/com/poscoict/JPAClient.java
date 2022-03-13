@@ -1,6 +1,7 @@
 package com.poscoict;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -23,16 +24,16 @@ public class JPAClient {
 			// Transaction 시작
 			tx.begin();
 			
-//			Board board = new Board();
-//			board.setTitle("JPA제목");
-//			board.setWriter("관리자");
-//			board.setContent("JPA 글 등록 잘 되네요.");
-//			board.setCreateDate(new Date());
-//			board.setCnt(0L);
+			Board board = new Board();
+			board.setTitle("JPA제목");
+			board.setWriter("관리자");
+			board.setContent("JPA 글 등록 잘 되네요.");
+			board.setCreateDate(new Date());
+			board.setCnt(0L);
 			
 			// insert
 			// 글 등록
-//			em.persist(board);
+			em.persist(board);
 			
 			// update
 			// 수정할 게시글 조회
@@ -41,11 +42,20 @@ public class JPAClient {
 			
 			// delete
 			// 삭제할 게시글 조회
-			Board board1 = em.find(Board.class, 1L);
+//			Board board1 = em.find(Board.class, 1L);
 			
 			// 게시글 삭제
-			board1.setSeq(1L);
-			em.remove(board1);
+//			board1.setSeq(1L);
+//			em.remove(board1);
+			
+			// JPQL
+			// 글 목록 조회
+			String jpql = "select b from Board b order by b.seq desc";
+			List<Board> boardList = 
+				em.createQuery(jpql, Board.class).getResultList();
+			for (Board brd : boardList) {
+				System.out.println("--->" + brd.toString());
+			}
 			
 			// Transaction commit
 			tx.commit();
