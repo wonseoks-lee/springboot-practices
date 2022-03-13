@@ -35,6 +35,10 @@ public class JPAClient {
 			
 			// Transaction commit
 			tx.commit();
+			
+			// 글 상세조회
+//			Board searchBoard = em.find(Board.class, 1L);
+//			System.out.println("---> " + searchBoard.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			tx.rollback();

@@ -5,8 +5,12 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.TableGenerator;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  * Entity implementation class for Entity: Board
@@ -14,15 +18,22 @@ import javax.persistence.Table;
  */
 
 @Entity
-@Table(name= "BOARD")
+@TableGenerator(name= "BOARD_SEQ_GENERATOR",
+				table= "ALL_SEQUENCES",
+				pkColumnValue = "BOARD_SEQ",
+				initialValue = 0,
+				allocationSize = 1)
 public class Board{
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.TABLE,
+					generator = "BOARD_SEQ_GENERATOR")
 	private Long seq;
+	
 	private String title;
 	private String writer;
 	private String content;
+	@Temporal(TemporalType.DATE)
 	private Date createDate;
 	private Long cnt;
 	public Long getSeq() {

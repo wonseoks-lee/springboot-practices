@@ -516,11 +516,28 @@ JPA에서 제공하는 어노테이션 설정
 	</persistence-unit>
 ```
 
-@Entitiy로 설정해둔 클래스(Board.java)가 등록 → 데이터 소스설정 ( H2 데이터베이스로부터 커넥션 획득 ) → 엔티티이름, 변수이름을 기준으로 BOARD 테이블을 매핑
+@Entitiy로 설정해둔 클래스(Board.java)가 등록 → 데이터 소스설정 ( H2 데이터베이스로부터 커넥션 획득, 각종 데이터베이스 정보 ... ) → 엔티티이름, 변수이름을 기준으로 BOARD 테이블을 매핑
 
 여기서 가장 중요한 설정은 ‘hibernate.dialect’ → Oracle이면 OracleDialect로 변경해서 사용
 
 hdm2ddl 을 create로 설정해두면 매번 테이블이 새롭게 생성되어 처리되기때문에 데이터 누적 불가능 → update로 바꾸면 데이터가 누적된다
+
+| 속성 | 의미 |
+| --- | --- |
+| hibernate.show_sql | 하이버네이트가 생성한 SQL을 콘솔에 출력 |
+| hibernate.format_sql | 하이버네이트가 생성한 SQL을 출력할 때, 보기좋은 포맷으로 출력 |
+| hibernate.use_sql_comments | SQL에 포함된 주석도 같이 출력 |
+| hibernate.id.new_generator_mappings | 키 생성 전략 사용 |
+| hibernate.hbm2ddl.auto | 테이블생성(CREATE)이나 변경(ALTER), 삭제(DROP)같은 DDL구문을 자동으로 실행할지 지정 |
+
+hibernate.id.new_generator_mappings 는 auto_increment랑 똑같은 설정임. 중요함.
+hibernate.hbm2ddl.auto 는 테이블을 새롭게 생성할지 또는 기존의 테이블을 재사용할지 등의 여부결정
+
+| 속성값 | 의미 |
+| --- | --- |
+| create | 애플리케이션을 실행할 때, 기존 테이블을 삭제하고 엔티티에 설정된 매핑정보를 참조하여 새로운 테이블 생성 (DROP → CREATE) |
+| create-drop | create와 같지만 애플리케이션이 종료되기 직전에 생성된 테이블을 삭제 (CREATE → DROP) |
+| update | 기존에 사용중인 테이블이 있으면 테이블을 생성하지않고 재사용. 없을때만 새롭게 생성. 만약 엔티티클래스의 매핑설정이 변경되면 변경된 내용만 반영 (ALTER) |
 
 ## Transaction
 
