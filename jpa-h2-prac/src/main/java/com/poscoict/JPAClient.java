@@ -23,15 +23,23 @@ public class JPAClient {
 			// Transaction 시작
 			tx.begin();
 			
-			Board board = new Board();
-			board.setTitle("JPA제목");
-			board.setWriter("관리자");
-			board.setContent("JPA 글 등록 잘 되네요.");
-			board.setCreateDate(new Date());
-			board.setCnt(0L);
+//			Board board = new Board();
+//			board.setTitle("JPA제목");
+//			board.setWriter("관리자");
+//			board.setContent("JPA 글 등록 잘 되네요.");
+//			board.setCreateDate(new Date());
+//			board.setCnt(0L);
 			
+			// insert
 			// 글 등록
-			em.persist(board);
+//			em.persist(board);
+			
+			// update
+			// 수정할 게시글 조회
+			Board board = em.find(Board.class, 1L);
+			board.setTitle("검색한 게시글의 제목 수정");
+			
+			
 			
 			// Transaction commit
 			tx.commit();
@@ -41,6 +49,7 @@ public class JPAClient {
 //			System.out.println("---> " + searchBoard.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
+			// Transaction rollback
 			tx.rollback();
 		} finally {
 			em.close();
