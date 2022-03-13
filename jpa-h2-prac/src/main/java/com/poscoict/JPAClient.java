@@ -36,10 +36,16 @@ public class JPAClient {
 			
 			// update
 			// 수정할 게시글 조회
-			Board board = em.find(Board.class, 1L);
-			board.setTitle("검색한 게시글의 제목 수정");
+//			Board board = em.find(Board.class, 1L);
+//			board.setTitle("검색한 게시글의 제목 수정");
 			
+			// delete
+			// 삭제할 게시글 조회
+			Board board1 = em.find(Board.class, 1L);
 			
+			// 게시글 삭제
+			board1.setSeq(1L);
+			em.remove(board1);
 			
 			// Transaction commit
 			tx.commit();
