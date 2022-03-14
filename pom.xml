@@ -14,5 +14,7 @@
 		<module>board-spring-boot-starter</module>
 		<module>test-starter</module>
     <module>jpa-h2-prac</module>
-  </modules>
+    <module>boot-jpa-h2</module>
+    <module>boot-jpa-prac</module>
+	</modules>
 </project>
