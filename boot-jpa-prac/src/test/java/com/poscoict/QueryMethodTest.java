@@ -3,12 +3,14 @@ package com.poscoict;
 import java.util.Date;
 import java.util.List;
 
-import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.poscoict.domain.Board;
@@ -64,10 +66,21 @@ public class QueryMethodTest {
 //		}
 //	}
 	
+//	@Test
+//	public void testFindByTitleContainingOrderBySeqDesc() {
+//		List<Board> boardList =
+//				boardRepo.findByTitleContainingOrderBySeqDesc("17");
+//		
+//		System.out.println("검색 결과");
+//		for (Board board : boardList) {
+//			System.out.println("--->" + board.toString());
+//		}
+//	}
+	
 	@Test
-	public void testFindByTitleContainingOrderBySeqDesc() {
-		List<Board> boardList =
-				boardRepo.findByTitleContainingOrderBySeqDesc("17");
+	public void testFindByTitleContaining() {
+		Pageable paging = PageRequest.of(0, 5, Sort.Direction.DESC, "seq");
+		List<Board> boardList = boardRepo.findByTitleContaining("제목", paging);
 		
 		System.out.println("검색 결과");
 		for (Board board : boardList) {
