@@ -53,10 +53,21 @@ public class QueryMethodTest {
 //		}
 //	}
 	
+//	@Test
+//	public void testFindByTitleContainingOrContentContaining() {
+//		List<Board> boardList =
+//				boardRepo.findByTitleContainingOrContentContaining("17", "17");
+//		
+//		System.out.println("검색 결과");
+//		for (Board board : boardList) {
+//			System.out.println("--->" + board.toString());
+//		}
+//	}
+	
 	@Test
-	public void testFindByTitleContainingOrContentContaining() {
+	public void testFindByTitleContainingOrderBySeqDesc() {
 		List<Board> boardList =
-				boardRepo.findByTitleContainingOrContentContaining("17", "17");
+				boardRepo.findByTitleContainingOrderBySeqDesc("17");
 		
 		System.out.println("검색 결과");
 		for (Board board : boardList) {
