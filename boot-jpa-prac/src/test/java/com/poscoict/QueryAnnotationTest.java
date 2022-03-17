@@ -7,8 +7,12 @@ import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.poscoict.domain.Board;
 import com.poscoict.persistence.BoardRepository;
 
 @RunWith(SpringRunner.class)
@@ -44,6 +48,17 @@ public class QueryAnnotationTest {
 		System.out.println("검색 결과");
 		for(Object[] row : boardList) {
 			System.out.println("---> "+ Arrays.toString(row));
+		}
+	}
+	
+	@Test
+	public void testQueryAnnotationTest4() {
+		Pageable paging = PageRequest.of(0, 3, Sort.Direction.DESC, "seq");
+		List<Board> boardList = boardRepo.queryAnnotationTest4(paging);
+		
+		System.out.println("검색 결과");
+		for(Board board : boardList) {
+			System.out.println("---> "+ board.toString());
 		}
 	}
 }
