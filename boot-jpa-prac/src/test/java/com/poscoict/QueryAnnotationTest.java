@@ -41,15 +41,15 @@ public class QueryAnnotationTest {
 //		}
 //	}
 	
-	@Test
-	public void testQueryAnnotationTest3() {
-		List<Object[]> boardList = boardRepo.queryAnnotationTest3("테스트 제목 10");
-		
-		System.out.println("검색 결과");
-		for(Object[] row : boardList) {
-			System.out.println("---> "+ Arrays.toString(row));
-		}
-	}
+//	@Test
+//	public void testQueryAnnotationTest3() {
+//		List<Object[]> boardList = boardRepo.queryAnnotationTest3("테스트 제목 10");
+//		
+//		System.out.println("검색 결과");
+//		for(Object[] row : boardList) {
+//			System.out.println("---> "+ Arrays.toString(row));
+//		}
+//	}
 	
 	@Test
 	public void testQueryAnnotationTest4() {
