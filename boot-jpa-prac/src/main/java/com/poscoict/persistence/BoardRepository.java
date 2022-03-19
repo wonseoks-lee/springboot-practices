@@ -29,6 +29,7 @@ public interface BoardRepository extends CrudRepository<Board, Long>{
 //	@Query("SELECT b from  Board b WHERE b.title like %?1% ORDER BY b.seq DESC")
 //	List<Board> queryAnnotationTest1(String searchKeyword);
 	
+	/*
 	// 이름기반 파라미터
 	@Query("SELECT b from Board b WHERE b.title like %:searchKeyword% ORDER BY b.seq DESC")
 	List<Board> queryAnnotationTest1(@Param("searchKeyword") String searchKeyword);
@@ -43,5 +44,5 @@ public interface BoardRepository extends CrudRepository<Board, Long>{
 	
 	@Query("SELECT b from Board b order by b.seq desc")
 	List<Board> queryAnnotationTest4(Pageable paging);
-	
+	*/
 }

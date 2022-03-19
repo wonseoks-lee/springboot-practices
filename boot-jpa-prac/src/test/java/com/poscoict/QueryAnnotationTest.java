@@ -51,14 +51,14 @@ public class QueryAnnotationTest {
 //		}
 //	}
 	
-	@Test
-	public void testQueryAnnotationTest4() {
-		Pageable paging = PageRequest.of(0, 3, Sort.Direction.DESC, "seq");
-		List<Board> boardList = boardRepo.queryAnnotationTest4(paging);
-		
-		System.out.println("검색 결과");
-		for(Board board : boardList) {
-			System.out.println("---> "+ board.toString());
-		}
-	}
+//	@Test
+//	public void testQueryAnnotationTest4() {
+//		Pageable paging = PageRequest.of(0, 3, Sort.Direction.DESC, "seq");
+//		List<Board> boardList = boardRepo.queryAnnotationTest4(paging);
+//		
+//		System.out.println("검색 결과");
+//		for(Board board : boardList) {
+//			System.out.println("---> "+ board.toString());
+//		}
+//	}
 }
