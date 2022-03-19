@@ -16,7 +16,7 @@ import lombok.ToString;
 
 @Getter
 @Setter
-@ToString
+@ToString(exclude = "member")
 @Entity
 public class Board{
 	
