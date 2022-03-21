@@ -33,4 +33,11 @@ public class Board{
 	@ManyToOne
 	@JoinColumn(name="MEMBER_ID", nullable=false)
 	private Member member;
+	
+	public void setMember(Member member) {
+		System.out.println("member.getboardList1 : " + member.getBoardList());
+		this.member = member;
+		member.getBoardList().add(this);
+		System.out.println("member.getboardList2 : " + member.getBoardList());
+	}
 }
